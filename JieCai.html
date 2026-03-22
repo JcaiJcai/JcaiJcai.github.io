@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="PhD Student in Computer Science at USC, Research in Multimodal Learning, LLMs, and Graph Learning">
+  <meta name="theme-color" content="#2962ff">
+  
+  <title>Jie Cai - PhD Student, University of Southern California</title>
+
+  <style>
+    /* Fonts */
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+    }
+    
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+    }
+
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fafafa;
+    }
+
+    a {
+      color: #1772d0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #333;
+    }
+
+    nav a.active {
+      color: #1772d0;
+      border-bottom: 2px solid #1772d0;
+      padding-bottom: 5px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header/Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+
+    /* About Section */
+    .about {
+      padding: 80px 20px;
+      background-color: #fff;
+    }
+
+    .about .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .profile-img {
+      text-align: center;
+    }
+
+    .profile-img img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .about-content h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .info-block h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .info-block ul {
+      list-style: none;
+    }
+
+    .info-block li {
+      padding: 8px 0;
+      color: #555;
+    }
+
+    .info-block li:before {
+      content: "▸ ";
+      color: #1772d0;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    /* Social Links */
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: #f0f0f0;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: #1772d0;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+    }
+
+    section:nth-child(odd) {
+      background-color: #fafafa;
+    }
+
+    section:nth-child(even) {
+      background-color: #fff;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #333;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    /* Research Section */
+    .research-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .research-content p {
+      margin-bottom: 20px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* Education Section */
+    .education-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .education-item {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-left: 4px solid #1772d0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .education-item.alt {
+      background-color: #fafafa;
+    }
+
+    .education-item h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .education-item p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 3px;
+    }
+
+    /* Publications Section */
+    .publication {
+      padding: 20px;
+      margin-bottom: 25px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .publication.alt {
+      background-color: #fafafa;
+    }
+
+    .publication-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .publication-title a {
+      color: #1772d0;
+    }
+
+    .publication-details {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .publication-venue {
+      font-style: italic;
+      color: #1772d0;
+      margin-top: 8px;
+    }
+
+    .publications-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact-content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-content p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #1772d0;
+      color: white;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #f09228;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #1772d0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .about .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+<!-- Navigation -->
+<nav id="navbar-main">
+  <div class="container">
+    <div class="logo">Jie Cai</div>
+    <ul>
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#research" class="nav-link">Research</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#publications" class="nav-link">Publications</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="container">
+    <h1>Jie Cai</h1>
+    <p>PhD Student in Computer Science | University of Southern California</p>
+    <p>Researching Multimodal Learning, Large Vision-Language Models, and Mechanistic Interpretability</p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="profile-img">
+      <img src="website/images/caijie4.jpg" alt="Jie Cai Profile Photo">
+      <div class="social-links" style="justify-content: center;">
+        <a href="mailto:caijie@usc.edu" title="Email">✉</a>
+        <a href="https://scholar.google.com.hk/citations?user=cgB5v7AAAAAJ" title="Google Scholar" target="_blank">🎓</a>
+        <a href="https://github.com" title="GitHub" target="_blank">⚙</a>
+        <a href="https://linkedin.com" title="LinkedIn" target="_blank">💼</a>
+      </div>
+    </div>
+    
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>I'm a second-year PhD student at the <a href="https://glamor-usc.github.io/" target="_blank">GLAMOR Lab</a> in the <a href="https://www.cs.usc.edu/" target="_blank">Thomas Lord Computer Science Department</a> at the <a href="https://www.usc.edu/" target="_blank">University of Southern California</a>. I am fortunate to be advised by <a href="https://jessethomason.com/" target="_blank">Professor Jesse Thomason</a>.</p>
+      
+      <p>My research interests span large vision-language models, multimodal learning, interpretability, and graph learning. I am particularly interested in how VLMs perceive and reason in real-world 3D environments, and in developing interpretability methods to uncover the mechanisms behind why certain vision-language models exhibit stronger spatial reasoning abilities, as well as why others struggle with specific spatial tasks. I'm also interested in how Multimodal Large Models integrate diverse modalitiesto form coherent representations that support complex reasoning.</p>
+
+      <div class="info-grid">
+        <div class="info-block">
+          <h3>Research Interests</h3>
+          <ul>
+            <li>Large Vision-Language Models</li>
+            <li>Multimodal Learning</li>
+            <li>Interpretability & XAI</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="mailto:caijie@usc.edu">Email: caijie@usc.edu</a></li>
+            <li><a href="https://scholar.google.com.hk/citations?user=cgB5v7AAAAAJ" target="_blank">Google Scholar</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub Profile</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research Section -->
+<!-- <section id="research">
+  <div class="container">
+    <h2>Research</h2>
+    <div class="research-content">
+      <p>My research focuses on exploring how multimodal systems can effectively integrate diverse data sources. I'm deeply interested in understanding both the capabilities and limitations of large language models in complex tasks, and developing explainable artificial intelligence (XAI) methods that provide meaningful insights into their decision-making processes.</p>
+      
+      <p>Additionally, I am fascinated by graph learning techniques and their applications in representing and analyzing structured data, particularly in scenarios that require a combination of multimodal inputs and interpretability. Through these research directions, I aim to create more robust, transparent, and ethically sound AI systems.</p>
+    </div>
+  </div>
+</section> -->
+
+<!-- Education Section -->
+<section id="education">
+  <div class="container">
+    <h2>Education</h2>
+    <div class="education-list">
+      <div class="education-item">
+        <h4>PhD in Computer Science (In Progress)</h4>
+        <p><strong>University of Southern California</strong></p>
+        <p>Advisor: Prof. Jesse Thomason | Focus: Large Vision-Language Models and Multimodal Learning</p>
+      </div>
+
+      <div class="education-item alt">
+        <h4>Master's Degree in Computer Science</h4>
+        <p><strong>Tsinghua University</strong></p>
+        <p>Advisors: Prof. Wenwu Zhu, Prof. Xin Wang</p>
+      </div>
+
+      <div class="education-item">
+        <h4>Bachelor's Degree in Mathematics and Applied Mathematics</h4>
+        <p><strong>South China University of Technology</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Publications Section -->
+<section id="publications">
+  <div class="container">
+    <h2>Publications</h2>
+    <div class="publications-list">
+      <div class="publication">
+        <div class="publication-title">
+          <a href="#" target="_blank">Domain-oriented time series inference agents for reasoning and automated analysis</a>
+        </div>
+        <div class="publication-details">
+          Wen Ye, Wei Yang, Defu Cao, Yizhou Zhang, Lumingyuan Tang, <strong>Jie Cai</strong>, Yan Liu
+        </div>
+        <div class="publication-venue">TMLR, 2026</div>
+      </div>
+
+      <div class="publication alt">
+        <div class="publication-title">
+          <a href="https://ojs.aaai.org/index.php/AAAI/article/view/28663" target="_blank">Multimodal Graph Neural Architecture Search under Distribution Shifts</a>
+        </div>
+        <div class="publication-details">
+          <strong>Jie Cai</strong>, Xin Wang, Haoyang Li, Ziwei Zhang, Wenwu Zhu
+        </div>
+        <div class="publication-venue">AAAI, 2024</div>
+      </div>
+
+        <div class="publication">
+            <div class="publication-title">
+                <a href="https://arxiv.org/abs/2104.04987" target="_blank">AutoGL: A Library for Automated Graph Learning</a>
+                [<a href="https://github.com/THUMNLab/AutoGL" target="_blank">Project page</a>]
+            </div>
+            <div class="publication-details">
+                Ziwei Zhang, Yijian Qin, Zeyang Zhang, Chaoyu Guan, <strong>Jie Cai</strong>, Heng Chang, Jiyan Jiang, Haoyang
+                Li, Zixin Sun, Beini Xie, Yang Yao, Yipeng Zhang, Xin Wang, Wenwu Zhu
+            </div>
+            <div class="publication-venue">arXiv, 2024</div>
+        </div>
+
+      <div class="publication">
+        <div class="publication-title">
+          <a href="https://dl.acm.org/doi/abs/10.1145/3543507.3583401" target="_blank">Knowledge Graph Completion with Counterfactual Augmentation</a>
+        </div>
+        <div class="publication-details">
+          Heng Chang, <strong>Jie Cai</strong>, Jia Li
+        </div>
+        <div class="publication-venue">WWW, 2023</div>
+      </div>
+
+      <div class="publication alt">
+        <div class="publication-title">
+          <a href="https://dl.acm.org/doi/abs/10.1145/3485447.3512176" target="_blank">Multimodal Continual Graph Learning with Neural Architecture Search</a>
+        </div>
+        <div class="publication-details">
+          <strong>Jie Cai</strong>, Xin Wang, Chaoyu Guan, Yateng Tang, Jin Xu, Bin Zhong, Wenwu Zhu
+        </div>
+        <div class="publication-venue">WWW, 2022</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <div class="contact-content">
+      <p>I'm always interested in discussing research opportunities, collaborations, or just talking about AI and machine learning!</p>
+      <p>Feel free to reach out via email or connect with me on the platforms below.</p>
+      
+      <div class="contact-buttons">
+        <a href="mailto:caijie@usc.edu" class="btn">Send Email</a>
+        <a href="https://scholar.google.com.hk/citations?user=cgB5v7AAAAAJ" target="_blank" class="btn">Google Scholar</a>
+        <a href="https://linkedin.com" target="_blank" class="btn">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Jie Cai. All rights reserved. | <a href="mailto:caijie@usc.edu">Contact</a></p>
+  </div>
+</footer>
+
+<script>
+  // Simple navigation highlighting
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').slice(1) === current) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // Smooth scrolling
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').slice(1);
+      if (targetId) {
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
